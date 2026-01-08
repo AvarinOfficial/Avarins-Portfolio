@@ -1,196 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avarin | Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Avarin | Portfolio</title>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
 
-        body {
-            background: radial-gradient(circle at top, #0f172a, #020617);
-            color: #e5e7eb;
-            overflow-x: hidden;
-        }
+html {
+    scroll-behavior: smooth;
+}
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
+body {
+    background: linear-gradient(180deg, #020617, #0f172a);
+    color: #e5e7eb;
+    overflow-x: hidden;
+}
 
-        /* Navbar */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            padding: 20px 10%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            backdrop-filter: blur(15px);
-            background: rgba(15, 23, 42, 0.6);
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-            z-index: 1000;
-        }
+/* NAVBAR */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(2,6,23,0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    z-index: 1000;
+}
 
-        nav h1 {
-            font-weight: 900;
-            font-size: 1.4rem;
-            background: linear-gradient(90deg, #38bdf8, #818cf8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+nav h1 {
+    font-size: 1.4rem;
+    font-weight: 900;
+    background: linear-gradient(90deg,#38bdf8,#818cf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
-        nav ul {
-            display: flex;
-            gap: 30px;
-        }
+nav ul {
+    display: flex;
+    gap: 30px;
+}
 
-        nav ul li {
-            list-style: none;
-            font-weight: 500;
-            opacity: 0.8;
-            transition: 0.3s;
-        }
+nav li {
+    list-style: none;
+}
 
-        nav ul li:hover {
-            opacity: 1;
-        }
+nav a {
+    font-weight: 500;
+    opacity: 0.8;
+}
 
-        section {
-            padding: 120px 10%;
-        }
+nav a:hover {
+    opacity: 1;
+}
 
-        /* Hero */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-        }
+/* SECTIONS */
+section {
+    padding: 140px 8% 120px;
+    scroll-margin-top: 90px;
+}
 
-        .hero-content {
-            max-width: 800px;
-        }
+h2 {
+    font-size: 2.6rem;
+    margin-bottom: 40px;
+}
 
-        .hero h2 {
-            font-size: 3.5rem;
-            font-weight: 900;
-            line-height: 1.1;
-        }
+.gradient {
+    background: linear-gradient(90deg,#38bdf8,#818cf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
-        .gradient-text {
-            background: linear-gradient(90deg, #38bdf8, #818cf8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+/* HERO */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
 
-        .hero p {
-            margin-top: 20px;
-            font-size: 1.1rem;
-            opacity: 0.85;
-        }
+.hero-content {
+    max-width: 850px;
+}
 
-        .hero-buttons {
-            margin-top: 40px;
-            display: flex;
-            gap: 20px;
-        }
+.hero h2 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+}
 
-        .btn {
-            padding: 14px 28px;
-            border-radius: 12px;
-            font-weight: 600;
-            border: none;
-            cursor: pointer;
-            transition: 0.3s;
-        }
+.hero p {
+    margin-top: 25px;
+    font-size: 1.1rem;
+    opacity: 0.85;
+}
 
-        .btn-primary {
-            background: linear-gradient(90deg, #38bdf8, #818cf8);
-            color: #020617;
-        }
+.hero-buttons {
+    margin-top: 45px;
+    display: flex;
+    gap: 20px;
+}
 
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(56,189,248,0.4);
-        }
+button {
+    padding: 14px 30px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+}
 
-        .btn-outline {
-            background: transparent;
-            border: 1px solid rgba(255,255,255,0.2);
-            color: white;
-        }
+.primary {
+    background: linear-gradient(90deg,#38bdf8,#818cf8);
+    color: #020617;
+}
 
-        .btn-outline:hover {
-            background: rgba(255,255,255,0.05);
-        }
+.primary:hover {
+    box-shadow: 0 10px 30px rgba(56,189,248,0.4);
+}
 
-        /* Cards */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 25px;
-            margin-top: 60px;
-        }
+.outline {
+    background: transparent;
+    color: white;
+    border: 1px solid rgba(255,255,255,0.25);
+}
 
-        .card {
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.05);
-            border-radius: 18px;
-            padding: 30px;
-            transition: 0.3s;
-        }
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    gap: 25px;
+}
 
-        .card:hover {
-            transform: translateY(-8px);
-            border-color: rgba(129,140,248,0.6);
-        }
+.card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 18px;
+    padding: 30px;
+}
 
-        .card h3 {
-            margin-bottom: 10px;
-        }
+.card h3 {
+    margin-bottom: 12px;
+}
 
-        /* Contact */
-        .contact {
-            text-align: center;
-        }
+/* CONTACT */
+.contact-box {
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+    background: rgba(255,255,255,0.04);
+    border-radius: 20px;
+    padding: 45px;
+    border: 1px solid rgba(255,255,255,0.08);
+}
 
-        .contact-box {
-            max-width: 700px;
-            margin: auto;
-            background: rgba(255,255,255,0.03);
-            border-radius: 20px;
-            padding: 40px;
-            border: 1px solid rgba(255,255,255,0.08);
-        }
+.contact-box p {
+    margin: 14px 0;
+    font-size: 1.05rem;
+}
 
-        .contact p {
-            margin: 15px 0;
-            font-size: 1.05rem;
-        }
+/* FOOTER */
+footer {
+    padding: 30px;
+    text-align: center;
+    opacity: 0.6;
+    font-size: 0.9rem;
+}
 
-        footer {
-            text-align: center;
-            padding: 30px;
-            opacity: 0.6;
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 768px) {
-            .hero h2 {
-                font-size: 2.5rem;
-            }
-        }
-    </style>
+/* MOBILE */
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 2.6rem;
+    }
+}
+</style>
 </head>
 
 <body>
@@ -207,9 +199,86 @@
 
 <section class="hero">
     <div class="hero-content">
-        <h2>
-            Hi, I'm <span class="gradient-text">Avarin</span><br>
-            Roblox Scripter & GUI Artist
-        </h2>
+        <h2>Hi, I'm <span class="gradient">Avarin</span><br>Roblox Scripter & GUI Artist</h2>
         <p>
-            Expert Roblox developer
+            Professional Roblox developer, GUI artist, and web engineer.
+            I create high-quality systems, modern interfaces, websites, and Discord bots
+            that scale and perform.
+        </p>
+        <div class="hero-buttons">
+            <a href="#contact"><button class="primary">Hire Me</button></a>
+            <a href="#experience"><button class="outline">View Work</button></a>
+        </div>
+    </div>
+</section>
+
+<section id="about">
+    <h2 class="gradient">About Me</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Roblox Development</h3>
+            <p>
+                2 years of experience. Worked on 17 games with over 7,000+ visits.
+                Strong in scripting, UI logic, and performance.
+            </p>
+        </div>
+        <div class="card">
+            <h3>Web Development</h3>
+            <p>
+                1 year of experience. Built websites using HTML, CSS, JavaScript, and Python.
+                Worked with 30+ companies.
+            </p>
+        </div>
+        <div class="card">
+            <h3>Creative Design</h3>
+            <p>
+                GUI artist focused on modern UI/UX, animations, and clean layouts.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="skills">
+    <h2 class="gradient">Skills</h2>
+    <div class="grid">
+        <div class="card">Roblox Lua</div>
+        <div class="card">UI / UX Design</div>
+        <div class="card">HTML / CSS / JavaScript</div>
+        <div class="card">Python</div>
+        <div class="card">Discord Bots</div>
+        <div class="card">Optimization</div>
+    </div>
+</section>
+
+<section id="experience">
+    <h2 class="gradient">Experience</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Games</h3>
+            <p>17 Roblox games developed with 7k+ total visits.</p>
+        </div>
+        <div class="card">
+            <h3>Clients</h3>
+            <p>Worked with 30+ companies delivering production-ready solutions.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2 class="gradient">Contact</h2>
+    <div class="contact-box">
+        <p><strong>Roblox:</strong> HAZ3MN7562</p>
+        <p><strong>Discord:</strong> yoboy_avarin</p>
+        <p><strong>Email:</strong> aaraizamir1@gmail.com</p>
+        <p style="margin-top:20px; opacity:0.8;">
+            ONLY DM OR CONTACT IF YOU WANT TO HIRE ME OR WORK FOR MY STUDIOS.
+        </p>
+    </div>
+</section>
+
+<footer>
+    © 2026 Avarin — All Rights Reserved
+</footer>
+
+</body>
+</html>
